@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  @apply bg-gray-50 text-gray-900;
+}
+
+@layer components {
+  .demo-container {
+    @apply w-10/12 mx-auto p-6;
+  }
+  
+  .demo-card {
+    @apply bg-white rounded-lg shadow-lg p-6 mb-8;
+  }
+  
+  .nav-link {
+    @apply px-4 py-2 rounded-md hover:bg-gray-100 transition-colors;
+  }
+  
+  .nav-link.active {
+    @apply bg-primary text-white hover:bg-secondary;
+  }
+}
