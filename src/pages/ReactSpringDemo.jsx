@@ -22,6 +22,23 @@ function ReactSpringDemo() {
     scale: 1,
     config: config.wobbly
   }));
+ 
+  // Fading Text Animation
+  const fadeText = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    loop: true,
+    config: { duration: 2000 },
+  });
+
+
+  // Rotating Square Animation
+  const rotateSquare = useSpring({
+    from: { rotateZ: 0 },
+    to: { rotateZ: 360 },
+    loop: true,
+    config: { duration: 3000 },
+  });
   
 
 
@@ -73,6 +90,28 @@ function ReactSpringDemo() {
         >
           Click to Toggle
         </animated.button>
+      </section>
+      {/* Fading Text Animation */}
+      <section className="demo-card">
+        <h2 className="text-2xl font-bold mb-4">Fading Text</h2>
+        <animated.p style={fadeText} className="text-lg">
+          This text fades in and out
+        </animated.p>
+      </section>
+
+      {/* Rotating Square */}
+      <section className="demo-card">
+        <h2 className="text-2xl font-bold mb-4">Rotating Square</h2>
+        <animated.div
+          style={{
+            ...rotateSquare,
+            width: 50,
+            height: 50,
+            backgroundColor: '#535bf2',
+            borderRadius: 8,
+          }}
+          className="mx-auto"
+        />
       </section>
 
       

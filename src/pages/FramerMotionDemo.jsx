@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import AnimatedList from '../components/AnimatedList';
 import AnimatedCar from '../components/AnimatedCar';
+import BouncingBall from '../components/BouncingBallFramer';
+import ColorChangingBox from '../components/ColorChangingBoxFramer';
 
 function FramerMotionDemo() {
   const [dragPosition, setDragPosition] = useState({ x: 0, y: 0 });
@@ -23,6 +25,16 @@ function FramerMotionDemo() {
 
       {/* Animated List */}
       <AnimatedList />
+
+      <section className="demo-card">
+        <h2 className="text-2xl font-bold mb-4">Spring Bouncing Ball</h2>
+        <BouncingBall />
+      </section>
+
+      <section className="demo-card">
+        <h2 className="text-2xl font-bold mb-4">Color-Changing Box</h2>
+        <ColorChangingBox />
+      </section>
 
       {/* Interactive Button */}
       <section className="demo-card">
